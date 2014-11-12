@@ -12,11 +12,12 @@
   </tr>
 
 <% @users.each do |user| %>
-  <tr>
+  <tr id="<%= dom_id(user) %>">
     <td><%= user.name %></td>
     <td><%= user.email %></td>
     <td><%= user.razer_id %></td>
     <td><%= user.steam_id %></td>
+    <td><%= link_to 'Make Bump', new_user_bump_path(user) %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>

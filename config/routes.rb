@@ -1,5 +1,8 @@
 Razer::Application.routes.draw do
-  resources :users
+  resources :users do
+    resources :bumps do
+    end
+  end
 
 
   # The priority is based upon order of creation:

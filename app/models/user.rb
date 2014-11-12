@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
+  has_many :bumps
+
   attr_accessible :email, :name, :razer_id, :steam_id
 
-  has_many :bumps
+
 
   validates :name, presence: true
   validates :email, presence: true

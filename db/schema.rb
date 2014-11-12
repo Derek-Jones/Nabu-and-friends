@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141112152330) do
+ActiveRecord::Schema.define(:version => 20141112161317) do
+
+  create_table "bumps", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "contact"
+    t.datetime "time"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "bumps", ["user_id"], :name => "index_bumps_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
