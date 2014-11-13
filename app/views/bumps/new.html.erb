@@ -1,1 +1,17 @@
 <h1> New Bump</h1>
+	<%= form_for([@user,@bump]) do |f| %>
+
+  	<div class="field">
+    	<%= f.label :contact %><br />
+    	<%= f.text_field :contact %>
+  	</div>
+  	<div class="field">
+    	<%= f.label :time %><br />
+    	<%= f.text_field :time, :value => Time.now %>
+  	</div>
+  	<div class="actions">
+    	<%= f.submit %>
+  	</div>
+	<% end %>
+
+	</ul>
